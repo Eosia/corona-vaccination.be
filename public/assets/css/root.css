@@ -1,0 +1,460 @@
+@charset "UTF-8";
+/* root.scss */
+/* imports des modules scss -imports des css de toutes les pages du site- */
+/*css général*/
+/* breakpoints bootstrap -taille d'écran- */
+/*
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Small devices (portrait phones, 300px and up)
+@media (max-width: 575.98px) {
+
+}
+*/
+/*reset*/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merienda:wght@700&family=Titillium+Web&display=swap");
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/*cache un élément*/
+.hidden {
+  display: none;
+}
+
+/*variables des polices*/
+/*
+font-family: 'Bebas Neue', cursive;
+font-family: 'Merienda', cursive;
+font-family: 'Titillium Web', sans-serif;
+*/
+/*Bebas Neue*/
+/*Merienda*/
+/*Titillium Web*/
+/*pagination*/
+.pagination {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.pagination * {
+  color: blue;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 1vh;
+  font-family: "Merienda", cursive;
+}
+.pagination *:hover {
+  color: red;
+  text-decoration: none;
+}
+.pagination *:after {
+  color: blue;
+}
+
+/*page de login*/
+.login-container {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-evenly !important;
+  align-items: flex-start !important;
+  min-height: 70vh !important;
+}
+
+.global-map {
+  width: 90% !important;
+  height: 90vh !important;
+  margin: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border: 1px solid black !important;
+  box-sizing: border-box !important;
+}
+
+/*css page d'accueil des centres*/
+.line {
+  height: 1px;
+  background-color: #b61924;
+  width: 50vh;
+  margin: 5vh auto;
+  text-align: center;
+}
+
+.link {
+  font-family: "Titillium Web", sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.6rem !important;
+}
+.link:hover {
+  background-color: #b61924 !important;
+  color: white !important;
+}
+
+em {
+  font-weight: 900;
+}
+
+.text-search {
+  font-family: "Titillium Web", sans-serif !important;
+  letter-spacing: 1px !important;
+}
+@media (min-width: 1200px) {
+  .text-search {
+    font-size: 1.6rem !important;
+  }
+}
+@media (max-width: 1199px) {
+  .text-search {
+    font-size: 1.6rem !important;
+  }
+}
+@media (max-width: 992px) {
+  .text-search {
+    font-size: 1.5rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .text-search {
+    font-size: 1.4rem !important;
+  }
+}
+@media (max-width: 576px) {
+  .text-search {
+    font-size: 1.2rem !important;
+  }
+}
+
+.address {
+  font-family: "Titillium Web", sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+}
+@media (min-width: 1200px) {
+  .address {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.6rem !important;
+  }
+}
+@media (max-width: 1199px) {
+  .address {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.5rem !important;
+  }
+}
+@media (max-width: 992px) {
+  .address {
+    font-size: 1.5rem !important;
+    letter-spacing: 0.4rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .address {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.3rem !important;
+  }
+}
+@media (max-width: 576px) {
+  .address {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+
+/*css footer*/
+footer {
+  bottom: 0 !important;
+  position: bottom !important;
+  background-color: #B61924 !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-evenly !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  min-height: 20vh !important;
+}
+footer a i:hover {
+  color: black;
+}
+footer a i::after {
+  color: white !important;
+}
+footer div {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+footer div p {
+  font-family: "Bebas Neue", cursive;
+  color: white;
+}
+@media (min-width: 1200px) {
+  footer div p {
+    font-size: 2.2rem !important;
+    letter-spacing: 0.4rem !important;
+  }
+}
+@media (max-width: 1199px) {
+  footer div p {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (max-width: 992px) {
+  footer div p {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (max-width: 768px) {
+  footer div p {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (max-width: 576px) {
+  footer div p {
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+
+/*css header*/
+.top-container {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-bottom: 3px solid black;
+  /*landscape max 992*/
+  /*landscape max 992*/
+  /*landscape max 768*/
+  /*landscape max 992*/
+  /*landscape max 992*/
+}
+@media (min-width: 1200px) {
+  .top-container {
+    height: 70vh !important;
+    min-height: 70vh !important;
+    max-height: 120vh !important;
+  }
+}
+@media (max-width: 1199px) {
+  .top-container {
+    height: 70vh !important;
+    min-height: 70vh !important;
+    max-height: 120vh !important;
+  }
+}
+@media (orientation: landscape) and (max-width: 992px) {
+  .top-container {
+    height: 150vh !important;
+    min-height: 150vh !important;
+    max-height: 200vh !important;
+  }
+}
+@media (max-width: 992px) {
+  .top-container {
+    height: 80vh !important;
+    min-height: 80vh !important;
+    max-height: 200vh !important;
+  }
+}
+@media (orientation: landscape) and (max-width: 992px) {
+  .top-container {
+    height: 150vh !important;
+    min-height: 150vh !important;
+    max-height: 250vh !important;
+  }
+}
+@media (max-width: 768px) {
+  .top-container {
+    height: 70vh !important;
+    min-height: 70vh !important;
+    max-height: 200vh !important;
+  }
+}
+@media (orientation: landscape) and (max-width: 820px) {
+  .top-container {
+    height: 150vh !important;
+    min-height: 150vh !important;
+    max-height: 250vh !important;
+  }
+}
+@media (orientation: landscape) and (max-width: 700px) {
+  .top-container {
+    height: 150vh !important;
+    min-height: 150vh !important;
+    max-height: 250vh !important;
+  }
+}
+@media (max-width: 576px) {
+  .top-container {
+    height: 80vh !important;
+    min-height: 80vh !important;
+    max-height: 120vh !important;
+  }
+}
+@media (orientation: landscape) and (max-width: 600px) {
+  .top-container {
+    height: 155vh !important;
+    min-height: 155vh !important;
+    max-height: 250vh !important;
+  }
+}
+@media (max-width: 350px) {
+  .top-container {
+    height: 92vh !important;
+    min-height: 92vh !important;
+    max-height: 150vh !important;
+  }
+}
+
+.title-container {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  margin: auto;
+}
+
+.title-container {
+  /*H1*/
+  /*H2*/
+}
+@media (min-width: 1200px) {
+  .title-container h1 {
+    font-size: 3.2rem !important;
+    letter-spacing: 0.8rem;
+    margin-top: 5vh !important;
+  }
+}
+@media (max-width: 1199px) {
+  .title-container h1 {
+    font-size: 3rem !important;
+    letter-spacing: 0.6rem;
+    margin-top: 5vh !important;
+  }
+}
+@media (max-width: 992px) {
+  .title-container h1 {
+    font-size: 2.4rem !important;
+    letter-spacing: 0.4rem;
+    margin-top: -5vh !important;
+  }
+}
+@media (max-width: 768px) {
+  .title-container h1 {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.2rem;
+    margin-top: 1vh !important;
+  }
+}
+@media (max-width: 576px) {
+  .title-container h1 {
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem;
+    margin-top: -5vh !important;
+  }
+}
+@media (min-width: 1200px) {
+  .title-container h2 {
+    font-size: 2.6rem !important;
+    letter-spacing: 0.4rem !important;
+    margin-top: 10vh !important;
+  }
+}
+@media (max-width: 1199px) {
+  .title-container h2 {
+    font-size: 2.4rem !important;
+    letter-spacing: 0.3rem !important;
+    margin-top: 10vh !important;
+  }
+}
+@media (max-width: 992px) {
+  .title-container h2 {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.1rem !important;
+    margin-top: 5vh !important;
+  }
+}
+@media (max-width: 768px) {
+  .title-container h2 {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.2rem !important;
+    margin-top: 2vh !important;
+  }
+}
+@media (max-width: 576px) {
+  .title-container h2 {
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem !important;
+    margin-top: 2vh !important;
+  }
+}
+
+/*css barre de navigation*/
+header nav {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+header nav .navbar-toggler {
+  background-color: white !important;
+}
+header nav .navbar-nav {
+  display: flex !important;
+  justify-content: space-evenly !important;
+  align-items: center !important;
+}
+header nav .navbar-nav li {
+  font-size: 1.6rem;
+  margin: auto;
+  text-align: center;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 0.2rem;
+}
+header nav .navbar-nav li a:hover {
+  color: black !important;
+}
+header nav .navbar-nav li a::after {
+  color: white !important;
+}
+
+/*# sourceMappingURL=root.css.map */

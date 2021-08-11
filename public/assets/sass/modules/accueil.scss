@@ -1,0 +1,94 @@
+/*css page d'accueil des centres*/
+
+.line {
+  height: 1px;
+  background-color: #b61924;
+  width: 50vh;
+  margin: 5vh auto;
+  text-align: center;
+}
+
+.link {
+  font-family: $font3 !important;
+  font-weight: 900 !important;
+  font-size: 1.6rem !important;
+
+  &:hover {
+    background-color: #b61924 !important;
+    color: white !important;
+  }
+}
+
+em {
+  font-weight: 900;
+}
+
+.text-search {
+
+  font-family: $font3 !important;
+  letter-spacing: 1px !important;
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    font-size: 1.6rem !important;
+  }
+
+  // Extra large devices (large desktops, 1200px and bottom)
+  @media (max-width: 1199px) {
+    font-size: 1.6rem !important;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (max-width: 992px) {
+    font-size: 1.5rem !important;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 768px) {
+    font-size: 1.4rem !important;
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (max-width: 576px) {
+    font-size: 1.2rem !important;
+  }
+}
+
+.address {
+
+  font-family: $font3 !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.6rem !important;
+  }
+
+  // Extra large devices (large desktops, 1200px and bottom)
+  @media (max-width: 1199px) {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.5rem !important;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (max-width: 992px) {
+    font-size: 1.5rem !important;
+    letter-spacing: 0.4rem !important;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 768px) {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.3rem !important;
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (max-width: 576px) {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+
+}
+

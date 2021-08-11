@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="{{ path('home') }}">
+        <figure class="img-fluid">
+            <img src="{{ asset('assets/img/logo.png') }}"
+                 alt="logo de corona-vaccination.be"
+                 title="logo de corona-vaccination.be" style="width: 104px;">
+            <figcaption class="hidden">
+                logo de corona-vaccination.be
+            </figcaption>
+        </figure>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item text-uppercase mx-5">
+                <a class="nav-link text-white" href="{{ path('home') }}">
+                    Accueil
+                </a>
+            </li>
+            <li class="nav-item text-uppercase">
+                <a class="nav-link text-white" href="{{ path('map') }}">
+                    Map
+                </a>
+            </li>
+            <li class="nav-item text-uppercase mx-5">
+                <a class="nav-link text-white" href="{{ path('contact') }}">
+                    Contact
+                </a>
+            </li>
+
+            {% if app.user %}
+            <li class="nav-item text-uppercase mx-5">
+                <a class="nav-link text-white" href="{{ path('admin') }}">
+                    Admin
+                </a>
+            </li>
+
+            {% endif %}
+
+
+        </ul>
+    </div>
+</nav>

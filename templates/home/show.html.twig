@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Corona-vaccination | Centre: {{ centre.nom }}{% endblock %}
+
+{% block body %}
+
+    <!--main start-->
+    <main class="container-fluid mt-1 mb-5 user-select-auto">
+
+        <!--vue centre-->
+        <section class="container mx-auto text-center mt-1 mb-5">
+            <div class="row mt-1 mb-5">
+
+                <div class="mx-auto text-center col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <!--nom du centre-->
+                    <h3 class="text-uppercase text-black mx-auto">
+                        Nom du centre : <br><br> {{ centre.nom }}
+                    </h3>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="mx-auto text-center col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
+                    <h4 class="text-uppercase text-black mx-auto">
+                        Province : <br><br> {{ centre.province }}
+                    </h4>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="mx-auto text-center col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
+                    <h5 class="text-uppercase text-black mx-auto">
+                        Adresse du centre:
+                    </h5>
+                    <address class="mx-auto address mt-5">
+                       N° {{ centre.numero }} - {{ centre.rue }}
+                        <br><br>
+                        Code postal : {{ centre.cp }}
+                        <br>
+                        <br>
+                        Ville : {{ centre.ville }}
+                    </address>
+                </div>
+
+                <div class="line"></div>
+
+                {% if centre.site %}
+                <div class="mx-auto text-center col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 my-5">
+                    <a href="{{ centre.site }}" class="link mx-auto text-uppercase text-decoration-none btn btn-outline-primary btn-lg" target="_blank" rel="noopener noreferrer nofollow">
+                        Site web du centre
+                    </a>
+                </div>
+
+                {% else%}
+                    <div class="mx-auto text-center col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 my-5">
+                        <a href="https://www.qvax.be" class="link mx-auto text-uppercase text-decoration-none btn btn-outline-primary btn-lg" target="_blank" rel="noopener noreferrer nofollow" >
+                            Site web du centre
+                        </a>
+                    </div>
+
+                {% endif %}
+                
+                <div class="mx-auto text-center col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 my-5">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item border border-dark rounded"
+                                src="{{ centre.map }}" width="100%" height="auto" style="border:0;"
+                                allowfullscreen="" loading="lazy" class="mx-auto">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--bouton de retour start-->
+        <div class="mx-auto text-center col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 my-5">
+            <div class="btn-cta mx-auto my-1 text-center">
+                <a href="{{ path('home') }}" class="link btn btn-outline-primary btn-lg mx-auto text-center col-12 col-sm-11 col-md-10 col-lg-6 col-xl-4 text-uppercase mb-5">
+                    Retour à la liste des centres
+                </a>
+            </div>
+        </div>
+        <!--bouton de retour stop-->
+    </main>
+
+{% endblock %}

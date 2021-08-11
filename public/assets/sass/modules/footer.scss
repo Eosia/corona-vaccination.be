@@ -1,0 +1,76 @@
+
+/*css footer*/
+
+footer {
+  bottom: 0 !important;
+  position: bottom !important;
+  background-color: #B61924 !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-evenly !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0!important;
+  box-sizing: border-box !important;
+  min-height: 20vh !important;
+
+  a{
+    i {
+      &:hover {
+        color: black;
+      }
+      &::after {
+        color: white !important;
+      }
+    }
+
+  }
+
+
+
+  div {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    p{
+      font-family: $font1;
+      color: white;
+
+      // Extra large devices (large desktops, 1200px and up)
+      @media (min-width: 1200px) {
+        font-size: 2.2rem !important;
+        letter-spacing: 0.4rem !important;
+      }
+
+      // Extra large devices (large desktops, 1200px and bottom)
+      @media (max-width: 1199px) {
+        font-size: 1.8rem !important;
+        letter-spacing: 0.2rem !important;
+      }
+
+      // Large devices (desktops, 992px and up)
+      @media (max-width: 992px) {
+        font-size: 1.6rem !important;
+        letter-spacing: 0.1rem !important;
+      }
+
+      // Medium devices (tablets, 768px and up)
+      @media (max-width: 768px) {
+        font-size: 1.4rem !important;
+        letter-spacing: 0.2rem !important;
+      }
+
+      // Small devices (landscape phones, 576px and up)
+      @media (max-width: 576px) {
+        font-size: 1rem !important;
+        letter-spacing: 0.1rem !important;
+      }
+    }
+  }
+}
+

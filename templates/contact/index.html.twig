@@ -1,0 +1,127 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Corona-vaccination | Nous contacter{% endblock %}
+
+{% block body %}
+
+
+<!--main start-->
+<main class="contact container-fluid mb-5">
+    <!--section 1 titre start-->
+    <section class="container mx-auto text-center mt-5">
+        <div class="row">
+            <div class="mx-auto text-center container">
+                {% for message in app.flashes('message') %}
+                    <div class="alert alert-success col-8 mx-auto text-center" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+            <h3 class="mx-auto text-center col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 mt-3">
+                Pour recevoir des informations ou nous formuler une demande, merci
+                de compléter ce formulaire :
+            </h3>
+        </div>
+    </section>
+    <!--section 1 titre stop-->
+
+    <!--ligne de separation doree start-->
+    <div class="ligne-or">
+    </div>
+    <!--ligne de separation doree stop-->
+
+    <!--formulaire de contact start-->
+    <section class="contact-section-2 container mx-auto text-center mt-5">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+
+                {# form de contact -------------------------------------------------------------------------------------------- #}
+
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    {{form_start(contactForm)}}
+                    <div class="row mx-auto text-center">
+                        <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto text-left">
+                            <label for="email" class="required"> Email *</label>
+                            <br>
+                            {{form_widget(contactForm.email)}}
+                            {{form_errors(contactForm.email)}}
+
+                        </div>
+
+                        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto text-left">
+                            <label for="nom" class="required"> Nom *</label>
+                            <br>
+                            {{form_widget(contactForm.nom)}}
+                            {{form_errors(contactForm.nom)}}
+                        </div>
+                        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto text-left">
+                            <label for="prenom" class="required"> Prénom *</label>
+                            <br>
+                            {{form_widget(contactForm.prenom)}}
+                            {{form_errors(contactForm.prenom)}}
+                        </div>
+                    </div>
+                    <div class="row mx-auto text-center">
+                        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto text-left">
+                            <label for="fonction"> Fonction</label>
+                            <br>
+                            {{form_widget(contactForm.fonction)}}
+                            {{form_errors(contactForm.fonction)}}
+                        </div>
+                        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto text-left">
+                            <label for="telephone"> Téléphone</label>
+                            <br>
+                            {{form_widget(contactForm.telephone)}}
+                            {{form_errors(contactForm.telephone)}}
+                        </div>
+                    </div>
+
+                    <div class="row mx-auto">
+                        <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-left">
+                            <label for="objet" class="required"> Objet *</label>
+                            <br />
+                            {{form_widget(contactForm.objet)}}
+                            {{form_errors(contactForm.objet)}}
+                        </div>
+                    </div>
+
+                    <div class="form-group text-left">
+                        <label for="contact_message" class="required"> Message *</label>
+                        <br>
+                        {{form_widget(contactForm.message)}}
+                        {{form_errors(contactForm.message)}}
+                    </div>
+
+                    <div class="form-group mx-auto text-left">
+                        <label for="captcha" class="required mb-3">Cochez le captcha pour envoyer votre message</label>
+                        <br>
+
+                        <div class="mx-auto text-center">
+                            {{form_widget(contactForm.captcha_checkvox) }}
+                        </div>
+                        {{form_errors(contactForm.captcha_checkvox) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{form_widget(contactForm.envoyer)}}
+                    </div>
+
+
+
+                    {# Render CSRF token etc .#}
+                    <div style="display:none">
+                        {{ form_rest(contactForm) }}
+                    </div>
+
+                    {{form_end(contactForm)}}
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--formulaire de contact stop-->
+
+    <!--captcha js-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+{% endblock %}

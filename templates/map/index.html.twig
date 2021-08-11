@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Corona-vaccination | Carte globale{% endblock %}
+
+{% block body %}
+    <div class="container-fluid my-5 mx-0">
+
+
+        <div class="row mx-auto">
+
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+
+                <h3 class="mx-auto text-center text-uppercase text-black">
+                    Carte globale des centres de vaccination de Belgique
+                </h3>
+
+            </div>
+
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto my-5">
+
+                <iframe class="global-map mx-auto rounded"
+                        src="https://www.google.com/maps/d/u/0/embed?mid=1LD2DHTNreS5bj7RNmhj2pb2m3_xvWlTn&ll=50.40457100476857%2C4.4718752125459496&z=8">
+
+                </iframe>
+
+            </div>
+
+        </div>
+
+        <!--bouton de retour start-->
+        <div class="mx-auto text-center col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 my-5">
+            <div class="btn-cta mx-auto my-1 text-center">
+                <a href="{{ path('home') }}" class="link btn btn-outline-primary btn-lg mx-auto text-center col-12 col-sm-11 col-md-10 col-lg-6 col-xl-4 text-uppercase mb-5">
+                    Retour à l'accueil
+                </a>
+            </div>
+        </div>
+        <!--bouton de retour stop-->
+
+
+    </div>
+{% endblock %}

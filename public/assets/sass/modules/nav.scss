@@ -1,0 +1,34 @@
+/*css barre de navigation*/
+
+header {
+
+    nav{
+        width: 100%;
+        height: auto;
+        margin: auto;
+
+        .navbar-toggler {
+            background-color: white !important
+        }
+        .navbar-nav {
+            display: flex !important;
+            justify-content: space-evenly !important;
+            align-items: center !important;
+            li {
+                font-size: 1.6rem;
+                margin: auto;
+                text-align: center;
+                font-family: $font3;
+                letter-spacing: 0.2rem;
+                a {
+                    &:hover{
+                        color: black !important;
+                    }
+                    &::after {
+                        color: white !important;
+                    }
+                }
+            }
+        }
+    }
+}

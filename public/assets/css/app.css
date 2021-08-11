@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/*css général*/
+/* breakpoints bootstrap -taille d'écran- */
+/*
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Small devices (portrait phones, 300px and up)
+@media (max-width: 575.98px) {
+
+}
+*/
+/*reset*/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merienda:wght@700&family=Titillium+Web&display=swap");
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/*cache un élément*/
+.hidden {
+  display: none;
+}
+
+/*variables des polices*/
+/*
+font-family: 'Bebas Neue', cursive;
+font-family: 'Merienda', cursive;
+font-family: 'Titillium Web', sans-serif;
+*/
+/*Bebas Neue*/
+/*Merienda*/
+/*Titillium Web*/
+/*pagination*/
+.pagination {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.pagination * {
+  color: blue;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 1vh;
+  font-family: "Merienda", cursive;
+}
+.pagination *:hover {
+  color: red;
+  text-decoration: none;
+}
+.pagination *:after {
+  color: blue;
+}
+
+/*page de login*/
+.login-container {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-evenly !important;
+  align-items: flex-start !important;
+  min-height: 70vh !important;
+}
+
+.global-map {
+  width: 90% !important;
+  height: 90vh !important;
+  margin: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border: 1px solid black !important;
+  box-sizing: border-box !important;
+}
+
+/*# sourceMappingURL=app.css.map */
